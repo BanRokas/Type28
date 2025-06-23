@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>16 paskaita - JS Įvadas</title>
+  <link rel="stylesheet" href="./main.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header></header>
+  <main>
+    <section> <!-- JS Pagrindai -->
+      <h2>JS Pagrindai</h2>
+      <ol>
+        <li>Variables - Kintamieji</li>
+        <li>Conditions - Sąlygos</li>
+        <li>Loops/Cycles - Ciklai</li>
+        <li>Functions - Funkcijos</li>
+        <li>Class - Klasės</li>
+      </ol>
+    </section>
+    <section> <!-- Duomenų tipai -->
+      <h2>Duomenų tipai</h2>
+      <ul>
+        <li>Number - skaičius - (nebūtina: int(integer) - sveikasis, float - realusis)</li>
+        <li>String - tekstas - (nebūtina: char(character) - vienas simbolis) (char[])</li>
+        <li>Boolean - loginis (true/false)</li>
+        <li>Array - masyvas - konteineris (eiliškumas svarbus)</li>
+        <li>Object - objektas - konteineris (eiliškumas nesvarbus)</li>
+        <li>NaN, null, undefined, Symbol...</li>
+      </ul>
+    </section>
+    <section> <!-- JS rašymo būdai -->
+      <!-- <h2 ondblclick="console.log('Hello')">JS rašymo būdai</h2> -->
+      <!-- <h2 onclick="someRandomFunction()">JS rašymo būdai</h2> -->
+      <h2 id="elementas">JS rašymo būdai</h2>
+      <ul>
+        <li>Inline - JS event'o aprašymas elemento atributo skiltyje</li>
+        <li>Internal - HTML kode atidaryti script tag'ą ir jo viduje rašyti JS kodą</li>
+        <li>External - Sukurti atskirą .js failą ir jį prikabinti prie HTML'o su script tag'u</li>
+      </ul>
+    </section>
+    <section> <!-- Komentavimas -->
+      <h2>Komentavimas</h2>
+      <ul>
+        <li>// - vienos eilutės komentavimas</li>
+        <li>/* */ - komentavimas tarp šių simbolių</li>
+      </ul>
+    </section>
+    <section> <!-- Informacijos atvaizdavimas naršyklėje -->
+      <h2>Informacijos atvaizdavimas naršyklėje</h2>
+      <ul id="list0">
+        <li>console.log("pranešimas") - išvedame į konsolę</li>
+        <li>console.dir(HTML_Elementas) - išvedama išsami informacija apie elementą į konsolę</li>
+        <li>console.group('grupėsPavadinimas') - grupuoti konsoles</li>
+        <li>console.groupCollapsed('grupėsPavadinimas') - grupuoti konsoles</li>
+        <li>console.groupEnd() - grupės užbaigimas</li>
+        <li>window.alert("Perspėjimas") - Perspėjimo lentelė ekrane</li>
+        <li>window.prompt("Užklausa") - Užklausos lentelė ekrane, su vieta rašyti atsakymą</li>
+        <li>Ateityje mokinsitės kaip įterpti informaciją į ekraną: innerHTML / textContent / innerText / append / appendChild / prepend...</li>
+      </ul>
+    </section>
+    <section> <!-- Kintamieji -->
+      <h2>Kintamieji</h2>
+      <p>
+        Kintamasis - kažkoks sugalvotas vardas ir jam priskirta informacija. Kreipiantis į tą vardą - galime išgauti jo viduje slypinčią informaciją.
+      </p>
+      <h3>Kintamojo kūrimas</h3>
+      <ol>
+        <li>kintamojo startas
+          <ul>
+            <li>var - senasis būdas (nebenaudotinas) (hoist'inimo pliusas)</li>
+            <li>let - naujasis būdas (kintamas)</li>
+            <li>const - naujasis būdas (nekintamas)</li>
+            <li> - nieko nerašant (NENAUDOTI)</li>
+          </ul>
+        </li>
+        <li>kintamojo vardas - susigalvoji logišką ir pakankamai trumpą vardą be tarpų ir/ar lietuviškų simbolių</li>
+        <li>= - priskyrimo simbolis</li>
+        <li>reikšmė
+          <ul>
+            <li>number - 4 | 0 | -5 | 1.51 | -3.3 | 12-4...</li>
+            <li>string - 'Žodis' | 'keli žodžiai' |  "" | ``...</li>
+            <li>boolean - true | false</li>
+            <li>array - ['zodis', 54, false, [], {}, 4, ...]</li>
+            <li>object - { raktinisZodis: reiksme, kitasRakZodis: kitaReiksme, ... }</li>
+            <li>...</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+    <section> <!-- Aritmetika -->
+      <h2>Aritmetika</h2>
+      <ul>
+        <li>x+y - sudėtis</li>
+        <li>x-y - atimtis</li>
+        <li>x*y - daugyba</li>
+        <li>x/y - dalyba</li>
+        <li>x%y - liekana</li>
+        <li>laipsnio kėlimas
+          <ul>
+            <li>x**y</li>
+            <li>Math.pow(x, y)</li>
+          </ul>
+        </li>
+        <li>šaknies traukimas
+          <ul>
+            <li>x**(1/y)</li>
+            <li>Math.sqrt(x) - kvadratinė šaknis</li>
+            <li>Math.cbrt(x) - kūbinė šaknis</li>
+            <li>Math.pow(x, 1/y)</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section> <!-- Palyginimai -->
+      <h2>Palyginimai</h2>
+      <ul>
+        <li>x > y - ar x daugiau negu y</li>
+        <li>x < y - ar x mažiau negu y</li>
+        <li>x >= y - ar x daugiau arba lygu negu y</li>
+        <li>x <= y - ar x mažiau arba lygu negu y</li>
+        <li>x == y - ar x lygus y (reikšmė)</li>
+        <li>x === y - ar x lygus y (reikšmė ir tipas)</li>
+        <li>x != y - ar x nelygus y (reikšmė)</li>
+        <li>x !== y - ar x nelygus y (reikšmė ir tipas)</li>
+      </ul>
+    </section>
+    <section> <!-- Loginiai ir Tipo operatoriai -->
+      <h2>Loginiai operatoriai</h2>
+      <ul>
+        <li>! - NOT - apverčia reikšmę</li>
+        <li>|| - OR - bent vienoje iš OR'o pusių turi būti tiesa, kad bendrai grąžintų tiesą</li>
+        <li>&& - AND - ar abejose AND'o pusėse yra tiesa - tik tuomet grąžins tiesą</li>
+      </ul>
+      <h2>Tipo operatoriai</h2>
+      <ul>
+        <li>typeof(kazkas) - tikrina koks yra "kazkas" tipas</li>
+        <li>object instanceof Class - ar objektas buvo sukurtas naudojant nurodytą Klasę</li>
+        <li>"keyword" in Object - ar objektas turi nurodytą raktinį žodį</li>
+      </ul>
+    </section>
+    <section> <!-- Sąlygos -->
+      <h2>Sąlygos</h2>
+      <p>
+        Jeigų sąlyga yra tiesa - jos viduje parašytas kodas yra vykdomas
+      </p>
+      <ul>
+        <li>if'ai
+          <ul>
+            <li>if</li>
+            <li>if else</li>
+            <li>if elseif</li>
+            <li>if elseif else</li>
+            <li>if elseif ... elseif else</li>
+          </ul>
+        </li>
+        <li>switch - ar tekstas lygus kažkam</li>
+        <li>ternary - sąlyga ? tiesos atvejo kodas : melo atvejo kodas</li>
+        <li>loginės</li>
+      </ul>
+    </section>
+    <section> <!-- Ciklai -->
+      <h2>Ciklai</h2>
+      <p>
+        Tai kažkokia veiksmų seka, kuri vyksta tol, kol prisegta sąlyga grąžina tiesą.
+      </p>
+      <ul>
+        <li>for</li>
+        <li>for in - sukti ciklą per objekto raktinius žodžius</li>
+        <li>for of - sukti ciklą per masyvo reikšmes</li>
+        <li>while</li>
+        <li>do while</li>
+        <li>masyvų iteraciniai metodai</li>
+      </ul>
+    </section>
+    <section> <!-- Metodas -->
+      <h2>Metodas</h2>
+      <p>
+        Metodas - kažkokia funkcija, kuri gali būti atliekama su tam tikro tipo duomenimis.
+      </p>
+      <p>
+        Su metodais galima: karpyti žodžius, keisti žodžių pavidalą, trumpinti/ilginti masyvus, sukti įvairius ciklus per masyvą...
+      </p>
+    </section>
+    <section> <!-- (basic) String metodai -->
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+    </section>
+    <section> <!-- (basic) Math/Number metodai -->
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+    </section>
+    <section> <!-- (keletas) Array metodai -->
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+    </section>
+    <section> <!-- (keletas) Objektai metodai -->
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+    </section>
+
+    <section> <!-- ką padaryti -->
+      Section 1: Variables & Declaration
+        Declare a variable name and assign your name.
+        Declare a const for PI (3.14).
+        Declare a let variable age and update it later.
+        Swap values of two variables (a = 5, b = 10).
+        Declare an uninitialized variable and log it.
+        Use var (and explain its difference from let).
+        Declare multiple variables in one line.
+        Re-declare a var variable and observe.
+        Try re-declaring a let variable (observe the error).
+        Declare a variable with null.
+
+      Section 2: Strings
+        Concatenate two strings ("Hello" + "World").
+        Use template literals (Hello ${name}).
+        Find the length of a string.
+        Access the first character of a string.
+        Convert a string to uppercase.
+        Check if a string includes a substring.
+        Extract a substring ("Hello".slice(1, 3)).
+        Split a string into an array ("a,b,c".split(",")).
+        Trim whitespace from a string.
+        Replace part of a string ("Hello".replace("H", "J")).
+
+      Section 3: Numbers & Math
+        Add two numbers.
+        Use Math.sqrt() to find a square root.
+        Generate a random number between 1-10.
+        Round a number to 2 decimal places.
+        Check if a number is even.
+        Convert a string to a number (parseInt("123")).
+        Use isNaN() to check if a value is "Not a Number".
+        Increment a number using ++.
+        Use Math.max() to find the largest number.
+        Divide by zero and observe the result (Infinity).
+
+      Section 4: Booleans & Comparisons
+        Compare two numbers with >, <, ===.
+        Check equality (== vs ===).
+        Use ! to negate a boolean.
+        Combine conditions with && and ||.
+        Check if a variable is true without === true.
+        Use ternary operator (age >= 18 ? "Adult" : "Child").
+        Falsy check: if (!variable).
+        Truthy check: if (variable).
+        Compare null and undefined.
+        Short-circuit evaluation (let result = a || b).
+
+      Section 5: Arrays
+        Create an array of numbers.
+        Access the first element of an array.
+        Add an element to the end of an array (push).
+        Remove the last element (pop).
+        Check array length.
+        Loop through an array with for.
+        Use Array.isArray() to check type.
+        Combine two arrays (concat or [...arr1, ...arr2]).
+        Find the index of an element (indexOf).
+        Sort an array alphabetically.
+
+      Section 6: Objects
+        Create an object { name: "Alice", age: 25 }.
+        Access a property (obj.name or obj["name"]).
+        Add a new property (obj.city = "New York").
+        Delete a property (delete obj.age).
+        Check if a property exists ("name" in obj).
+        Loop through object keys (for...in).
+        Copy an object (const newObj = { ...obj }).
+        Merge two objects (Object.assign or {...obj1, ...obj2}).
+        Convert object to JSON (JSON.stringify).
+        Parse JSON back to an object (JSON.parse).
+    </section>
+  </main>
+  <footer></footer>
+
+  <!-- defer atributas neveikia, vienintelis būdas, kad veiktų toks (kuris kreipiasi į HTML elementus) internal kodas - jį nukelti į HTML failo apačią-->
+  <!-- <script>
+    const someRandomFunction = () => {
+      console.log('Hello world!');
+    }
+    document
+      .querySelector('#elementas')
+      .addEventListener('mouseover', () => {
+        console.log('H2 got mouse over it');
+      });
+  </script> -->
+</body>
+</html>

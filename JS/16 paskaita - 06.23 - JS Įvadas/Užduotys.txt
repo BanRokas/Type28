@@ -1,0 +1,11 @@
+CAO:
+  Pamokos:
+    1, 2, 3, 5 - išsamiau
+    10, 11 (be callback), 12, 14 - galima užmesti akį
+
+Andriaus:
+  <section> <!-- ką padaryti -->
+
+Extra:
+  https://www.youtube.com/watch?v=W6NZfCO5SIk - Mosh - JavaScript Course for Beginners – Your First Step to Web Development
+  https://www.youtube.com/watch?v=2ml4x0rO1PQ - Tim - 5 Mini JavaScript Projects - For Beginners
